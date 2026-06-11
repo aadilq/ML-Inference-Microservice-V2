@@ -1,0 +1,12 @@
+fastapi 
+uvicorn[standard] 
+yt-dlp 
+assemblyai 
+sqlalchemy
+psycopg2-binary
+python-dotenv
+pydantic
+transformers
+torch
+httpx
+pytest
