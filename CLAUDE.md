@@ -145,7 +145,7 @@ HF_MODEL=facebook/bart-large-mnli
 ### Phase 1 — Project Scaffold
 - [✅] **1.1** Write `requirements.txt` with all dependencies
 - [✅] **1.2** Write `.gitignore` and `.env.example`
-- [ ] **1.3** Write `docker-compose.yml` skeleton with `api` and `db` services
+- [✅] **1.3** Write `docker-compose.yml` skeleton with `api` and `db` services
 
 ### Phase 2 — Database Layer
 - [ ] **2.1** Write `database.py` — engine, `SessionLocal`, and `create_all` helper
