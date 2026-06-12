@@ -148,7 +148,7 @@ HF_MODEL=facebook/bart-large-mnli
 - [✅] **1.3** Write `docker-compose.yml` skeleton with `api` and `db` services
 
 ### Phase 2 — Database Layer
-- [ ] **2.1** Write `database.py` — engine, `SessionLocal`, and `create_all` helper
+- [✅] **2.1** Write `database.py` — engine, `SessionLocal`, and `create_all` helper
 - [ ] **2.2** Write `models.py` — `InferenceRequest` and `InferenceResult` SQLAlchemy models
 - [ ] **2.3** Verify DB connection and table creation fires correctly on app startup
 
