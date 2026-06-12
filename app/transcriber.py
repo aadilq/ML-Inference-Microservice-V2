@@ -12,7 +12,13 @@ def transcribe_video(source_path: str) -> list[dict]:
     transcriber = aai.Transcriber(config=config)
     transcript = transcriber.transcribe(source_path)
 
+    if transcript.status == aai.TranscriptStatus.error:
+        raise RuntimeError(f"Transcription failed: {transcript.error}")
+    if not transcript.utterances:
+        raise RuntimeError("Transcription returned no utterances — no speech detected")
     return [
         {"text": utterance.text, "start": utterance.start, "end": utterance.end, "speaker": utterance.speaker}
             for utterance in transcript.utterances
     ]
+
+  

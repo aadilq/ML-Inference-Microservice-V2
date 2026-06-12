@@ -160,7 +160,7 @@ HF_MODEL=facebook/bart-large-mnli
 ### Phase 4 — Transcription Step
 - [✅] **4.1** Integrate AssemblyAI SDK with speaker diarization enabled
 - [✅] **4.2** Parse response into a list of segments: `text`, `start`, `end`, `speaker`
-- [ ] **4.3** Handle transcription errors cleanly
+- [✅] **4.3** Handle transcription errors cleanly
 
 ### Phase 5 — ML Scorer
 - [ ] **5.1** Write `scorer.py` — `Scorer` class, load `facebook/bart-large-mnli` pipeline in `__init__`
