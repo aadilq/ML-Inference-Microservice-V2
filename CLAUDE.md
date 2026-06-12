@@ -158,7 +158,7 @@ HF_MODEL=facebook/bart-large-mnli
 - [✅] **3.3** Handle download errors cleanly (raise HTTP exception with clear message)
 
 ### Phase 4 — Transcription Step
-- [ ] **4.1** Integrate AssemblyAI SDK with speaker diarization enabled
+- [✅] **4.1** Integrate AssemblyAI SDK with speaker diarization enabled
 - [ ] **4.2** Parse response into a list of segments: `text`, `start`, `end`, `speaker`
 - [ ] **4.3** Handle transcription errors cleanly
 
