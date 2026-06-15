@@ -165,7 +165,7 @@ HF_MODEL=facebook/bart-large-mnli
 ### Phase 5 — ML Scorer
 - [✅] **5.1** Write `scorer.py` — `Scorer` class, load `facebook/bart-large-mnli` pipeline in `__init__`
 - [✅] **5.2** Define the three candidate label groups as module-level constants
-- [ ] **5.3** Implement `score_segments()` — batched zero-shot classification across all label groups
+- [✅] **5.3** Implement `score_segments()` — batched zero-shot classification across all label groups
 - [ ] **5.4** Map raw classification output → `score` (float), `topic` (string), `energy_level` (string)
 
 ### Phase 6 — API Layer

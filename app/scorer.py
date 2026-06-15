@@ -10,4 +10,17 @@ class Scorer:
             "zero-shot-classification",
             model=model_name
         )
+    def score_segments(self, segments: list[dict]) -> list[dict]:
+        texts = [s["text"] for s in segments]
+
+        engagement_results = self.classifier(texts, ENGAGEMENT_LABELS)
+        topic_results = self.classifier(texts, TOPIC_LABELS)
+        energy_results = self.classifier(texts, ENERGY_LABELS)
+
+
+            
+            
+
+
+
     
