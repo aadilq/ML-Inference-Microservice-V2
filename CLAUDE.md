@@ -154,7 +154,7 @@ HF_MODEL=facebook/bart-large-mnli
 
 ### Phase 3 — Download Step
 - [✅] **3.1** Integrate `yt-dlp` to download video from a YouTube URL to a temp directory
-- [ ] **3.2** Add YouTube URL validation (format check + domain check)
+- [✅] **3.2** Add YouTube URL validation (format check + domain check)
 - [✅] **3.3** Handle download errors cleanly (raise HTTP exception with clear message)
 
 ### Phase 4 — Transcription Step
