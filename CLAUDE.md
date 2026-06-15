@@ -169,7 +169,7 @@ HF_MODEL=facebook/bart-large-mnli
 - [✅] **5.4** Map raw classification output → `score` (float), `topic` (string), `energy_level` (string)
 
 ### Phase 6 — API Layer
-- [ ] **6.1** Write `schemas.py` — `ScoreRequest`, `SegmentScore`, `ScoreResponse` Pydantic models
+- [✅] **6.1** Write `schemas.py` — `ScoreRequest`, `SegmentScore`, `ScoreResponse` Pydantic models
 - [ ] **6.2** Write `main.py` — FastAPI app with lifespan (model load + DB init) and DB session dependency
 - [ ] **6.3** Implement `POST /score` — validate URL, run pipeline (download → transcribe → score), persist to DB, delete temp file, return response
 - [ ] **6.4** Implement `GET /health` — return `{ "status": "ok", "model": "<HF_MODEL>" }`
