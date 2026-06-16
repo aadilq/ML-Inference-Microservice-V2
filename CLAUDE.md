@@ -176,7 +176,7 @@ HF_MODEL=facebook/bart-large-mnli
 
 ### Phase 7 — Containerization
 - [✅] **7.1** Write `Dockerfile` — install deps with CPU-only torch index URL, pre-download HF model at build time
-- [ ] **7.2** Wire `docker-compose.yml` — env vars, `db` health check, `api` depends-on db
+- [✅] **7.2** Wire `docker-compose.yml` — env vars, `db` health check, `api` depends-on db
 - [ ] **7.3** Smoke test: `docker compose up --build`, hit `GET /health` then `POST /score` with a real YouTube URL
 
 ### Phase 8 — Testing

@@ -23,7 +23,8 @@ class Scorer:
                 "segment_index": i,
                 "score": engagement["scores"][engagement["labels"].index("engaging highlight")],
                 "topic": topic["labels"][0],
-                "energy_level": energy["labels"][0].split()[0].lower()
+                "energy_level": energy["labels"][0].split()[0].lower(),
+                "raw_text": texts[i]
             })
         return results
             

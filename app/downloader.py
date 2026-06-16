@@ -7,7 +7,7 @@ def download_video(video_url: str):
     print(f"Temporary directory created at: {temp_dir}")
 
     ydp_opts = {
-        "format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+        "format": "best[ext=mp4]/best",
         "outtmpl": f"{temp_dir}/source.mp4",
         "merge_output_format": "mp4",
     }

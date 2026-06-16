@@ -16,6 +16,7 @@ class SegmentScore(BaseModel):
     score: float
     topic: str
     energy_level: str
+    raw_text: str
 
 class ScoreResponse(BaseModel):
     scores: list[SegmentScore]
