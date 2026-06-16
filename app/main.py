@@ -26,6 +26,7 @@ app = FastAPI(lifespan=lifespan)
 @app.post('/score')
 def score(body: ScoreRequest, request: Request, db: Session = Depends(get_db)):
     video_url = str(body.url)
+    source_path = None
     try:
         source_path = download_video(video_url)
         segments = transcribe_video(source_path)
@@ -36,7 +37,7 @@ def score(body: ScoreRequest, request: Request, db: Session = Depends(get_db)):
         db.refresh(inferenceRequest)
 
         for segment, score in zip(segments, scores):
-            inferenceResult = InferenceResult(request_id=inferenceRequest.request_id, segment_index=score["segment_index"], raw_text=segment["text"], score=segment["score"], topic=segment["topic"], energy_level=segment["energy_level"])
+            inferenceResult = InferenceResult(request_id=inferenceRequest.request_id, segment_index=score["segment_index"], raw_text=segment["text"], score=score["score"], topic=score["topic"], energy_level=score["energy_level"])
             db.add(inferenceResult)
         db.commit()
     except Exception as e:
@@ -45,7 +46,11 @@ def score(body: ScoreRequest, request: Request, db: Session = Depends(get_db)):
         if source_path:
             shutil.rmtree(os.path.dirname(source_path))
     return ScoreResponse(scores=scores)
-    
+
+@app.get('/health')
+def healthcheck():
+    return {"status": "ok", "model": os.getenv("HF_MODEL")}
+
 
     
 
