@@ -177,10 +177,10 @@ HF_MODEL=facebook/bart-large-mnli
 ### Phase 7 — Containerization
 - [✅] **7.1** Write `Dockerfile` — install deps with CPU-only torch index URL, pre-download HF model at build time
 - [✅] **7.2** Wire `docker-compose.yml` — env vars, `db` health check, `api` depends-on db
-- [ ] **7.3** Smoke test: `docker compose up --build`, hit `GET /health` then `POST /score` with a real YouTube URL
+- [✅] **7.3** Smoke test: `docker compose up --build`, hit `GET /health` then `POST /score` with a real YouTube URL
 
 ### Phase 8 — Testing
-- [ ] **8.1** Write `test_scorer.py` — unit tests with mocked HF pipeline, verify score/topic/energy mapping logic
+- [✅] **8.1** Write `test_scorer.py` — unit tests with mocked HF pipeline, verify score/topic/energy mapping logic
 - [ ] **8.2** Write `test_api.py` — integration test for `POST /score`: assert response shape and DB rows written
 - [ ] **8.3** Add `GET /health` integration test — assert `model` field present in response
 - [ ] **8.4** Run full test suite (`pytest`), confirm all tests pass
