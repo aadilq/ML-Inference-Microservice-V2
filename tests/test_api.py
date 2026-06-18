@@ -31,3 +31,11 @@ def test_score_endpoint(mock_rmtree, mock_init_db, mock_scorer, mock_transcribe,
         ]
         }
 
+
+@patch("app.main.init_db")
+@patch("app.main.Scorer")
+def test_health_endpoint(mock_scorer, mock_init_db):
+    with TestClient(app=app) as client:
+        response = client.get("/health")
+    assert response.status_code == 200
+    assert "model" in response.json()
